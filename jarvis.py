@@ -62,7 +62,7 @@ if __name__ == "__main__":
 
         query = takeCommand().lower()
         if 'wikipedia' in query:
-            speak('Searching Wikipedia...')
+            speak('Searching in Wikipedia...')
             query = query.replace("wikipedia", "")
             results = wikipedia.summary(query, sentences=2)
             speak("According to Wikipedia")
