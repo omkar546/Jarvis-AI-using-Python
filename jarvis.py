@@ -60,14 +60,14 @@ if __name__ == "__main__":
     wishMe()
     while True:
 
-        query = takeCommand().lower()
-        if 'wikipedia' in query:
-            speak('Searching in Wikipedia...')
-            query = query.replace("wikipedia", "")
-            results = wikipedia.summary(query, sentences=2)
-            speak("According to Wikipedia")
-            print(results)
-            speak(results)
+#         query = takeCommand().lower()
+#         if 'wikipedia' in query:
+#             speak('Searching in Wikipedia...')
+#             query = query.replace("wikipedia", "")
+#             results = wikipedia.summary(query, sentences=2)
+#             speak("According to Wikipedia")
+#             print(results)
+#             speak(results)
 
         elif 'open youtube' in query:
             webbrowser.open("youtube.com")
@@ -80,7 +80,7 @@ if __name__ == "__main__":
 
 
         elif 'play music' in query:
-            music_dir = 'D:\\Jarvis_Songs2'
+            music_dir = 'D:\\Song'
             songs = os.listdir(music_dir)
             print(songs)    
             os.startfile(os.path.join(music_dir, songs[0]))
@@ -93,13 +93,4 @@ if __name__ == "__main__":
             codePath = "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\jarvis.exe"
             os.startfile(codePath)
 
-        elif 'email to omkar' in query:
-            try:
-                speak("What should I say?")
-                content = takeCommand()
-                to = "omkargeedh2001@gmail.com"    
-                sendEmail(to, content)
-                speak("Email has been sent!")
-            except Exception as e:
-                print(e)
-                speak("Sorry. I am not able to send this email try again!")    
+        
